@@ -6,11 +6,20 @@ class Home extends Component {
     render() {
         return (
             <main>
-                Welcome! Sign up to use
-                <Register />
+                <h1 className="main-heading">Welcome!</h1>
+                <div className="content-wrapper">
+                    <div className="form-wrapper">
+                        New to the site? Create an account!
+                        <Register />
+                    </div>
 
-                Already have an account? Log in below
-                <Login />
+                    <div className="divider"/>
+
+                    <div className="form-wrapper">
+                        Already have an account? Log in now!
+                        <Login />
+                    </div>
+                </div>
             </main>
         )
     }

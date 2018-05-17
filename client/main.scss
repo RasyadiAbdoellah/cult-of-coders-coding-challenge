@@ -1,0 +1,37 @@
+// colours extracted from psd
+$dark-font: #403f3f;
+$light-font: #fefefe;
+$light-grey: #f7f6f6;
+$dark-grey: #ebebeb;
+$cyan: #00bff3;
+$purple: #8680bc;
+$orange: #fbaf5d;
+$pink: #f06eaa;
+
+body {
+  font-family: sans-serif;
+  color: $dark-font;
+  background-color: $light-grey;
+}
+
+
+.main-heading {
+  font-size: 3em;
+  margin: 25px auto;
+  max-width: 50%;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex; 
+  justify-content: space-evenly;
+  max-width: 100%;
+
+  padding: 5%;
+}
+
+.divider {
+  width: 1.5px;
+  margin: 6px 0;
+  background: $dark-font;
+}
