@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
+import Register from '../users/Register';
+import Login from '../users/Login'
 
 class Home extends Component {
     render() {
         return (
             <main>
-                Welcome!
-                <a href={FlowRouter.url('login')}>Login</a>
-                <a href={FlowRouter.url('register')}>Register</a>
+                Welcome! Sign up to use
+                <Register />
+
+                Already have an account? Log in below
+                <Login />
             </main>
         )
     }

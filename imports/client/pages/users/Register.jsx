@@ -3,8 +3,8 @@ import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
 class Register extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
     }
 
@@ -26,22 +26,20 @@ class Register extends React.Component {
 
     render() {
         return (
-            <main>
-                <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit}>
-                    <AutoField name="email"/>
-                    <ErrorField name="email"/>
+            <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit} className="credential-form">
+                <AutoField name="email" label={false} placeholder/>
+                <ErrorField name="email"/>
 
-                    <AutoField name="password" type="password"/>
-                    <ErrorField name="password"/>
+                <AutoField name="password" type="password" label={false} placeholder/>
+                <ErrorField name="password"/>
 
-                    <AutoField name="confirm_password" type="password"/>
-                    <ErrorField name="confirm_password"/>
+                <AutoField name="confirm_password" type="password" label={false} placeholder/>
+                <ErrorField name="confirm_password"/>
 
-                    <button type="submit">
-                        Register
-                    </button>
-                </AutoForm>
-            </main>
+                <button type="submit">
+                    Register
+                </button>
+            </AutoForm>
         )
     }
 }

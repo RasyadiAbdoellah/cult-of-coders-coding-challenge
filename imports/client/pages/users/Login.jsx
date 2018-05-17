@@ -3,8 +3,8 @@ import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
 class Login extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     onSubmit = (data) => {
@@ -21,19 +21,17 @@ class Login extends React.Component {
 
     render() {
         return (
-            <main className="cc-main">
-                <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
-                    <AutoField name="email"/>
-                    <ErrorField name="email"/>
+            <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
+                <AutoField name="email" label={false} placeholder/>
+                <ErrorField name="email"/>
 
-                    <AutoField name="password" type="password"/>
-                    <ErrorField name="password"/>
+                <AutoField name="password" type="password" label={false} placeholder />
+                <ErrorField name="password"/>
 
-                    <button type="submit">
-                        Login
-                    </button>
-                </AutoForm>
-            </main>
+                <button type="submit">
+                    Login
+                </button>
+            </AutoForm>
         )
     }
 }
