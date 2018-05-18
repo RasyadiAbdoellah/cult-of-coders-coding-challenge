@@ -33,7 +33,7 @@ class DonutsList extends React.Component {
                 {
                     donuts.map(donut => {
                         return (
-                            <div key={donut._id}>
+                            <div key={donut._id} className="donut-list-item">
                                 <p>Name: {donut.name}</p>
                                 <p>Price: {donut.price}</p>
                                 <p>Is Comestible? : {donut.isComestible ? 'Yes' : 'No'}</p>

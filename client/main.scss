@@ -1,5 +1,6 @@
 // colours extracted from psd
-$dark-font: #403f3f;
+$dark-font:#403f3f;
+$med-font: #7b7b7b;
 $light-font: #fefefe;
 $light-grey: #f7f6f6;
 $dark-grey: #ebebeb;
@@ -7,6 +8,8 @@ $cyan: #00bff3;
 $purple: #8680bc;
 $orange: #fbaf5d;
 $pink: #f06eaa;
+$error-bg: #ffc7c7;
+$error-font:#992828;
 
 body {
   font-family: sans-serif;
@@ -24,6 +27,7 @@ body {
 
 .content-wrapper {
   display: flex; 
+  flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 100%;
 
@@ -33,5 +37,46 @@ body {
 .divider {
   width: 1.5px;
   margin: 6px 0;
-  background: $dark-font;
+  background: $dark-grey;
+}
+
+.credential-form  {
+  * {
+    margin: .5em 0;
+  }
+
+  button {
+    width: 100%;
+    padding: 1em;
+    background-color: $cyan;
+    border: none;
+    color: $light-font;
+    border-radius: 7.5px; 
+  }
+
+  input {
+    width: 100%;
+    background-color: $dark-grey;
+    padding: 1em;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 7.5px; 
+  }
+
+  input::placeholder {
+    color: $med-font;
+  }
+}
+
+.error-field {
+  background-color:$error-bg;
+  padding: 10px;
+  border-radius: 5px;
+  color:$error-font;
+}
+
+.donut-list-item {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

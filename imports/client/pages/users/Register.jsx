@@ -28,17 +28,17 @@ class Register extends React.Component {
         return (
             <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit} className="credential-form">
                 <AutoField name="email" label={false} placeholder/>
-                <ErrorField name="email"/>
-
                 <AutoField name="password" type="password" label={false} placeholder/>
-                <ErrorField name="password"/>
-
                 <AutoField name="confirm_password" type="password" label={false} placeholder/>
-                <ErrorField name="confirm_password"/>
 
                 <button type="submit">
                     Register
                 </button>
+
+                <ErrorField name="email" className="error-field"/>
+                <ErrorField name="password" className="error-field"/>
+                <ErrorField name="confirm_password" className="error-field"/>
+
             </AutoForm>
         )
     }

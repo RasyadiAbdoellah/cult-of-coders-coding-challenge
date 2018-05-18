@@ -21,16 +21,17 @@ class Login extends React.Component {
 
     render() {
         return (
-            <AutoForm schema={LoginSchema} onSubmit={this.onSubmit}>
-                <AutoField name="email" label={false} placeholder/>
-                <ErrorField name="email"/>
-
+            <AutoForm schema={LoginSchema} onSubmit={this.onSubmit} className="credential-form">
+                <AutoField name="email" label={false} placeholder />
                 <AutoField name="password" type="password" label={false} placeholder />
-                <ErrorField name="password"/>
+
 
                 <button type="submit">
                     Login
                 </button>
+
+                <ErrorField name="email" className="error-field"/>
+                <ErrorField name="password" className="error-field"/>
             </AutoForm>
         )
     }
