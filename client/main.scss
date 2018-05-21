@@ -1,15 +1,4 @@
-// colours extracted from psd
-$dark-font:#403f3f;
-$med-font: #7b7b7b;
-$light-font: #fefefe;
-$light-grey: #f7f6f6;
-$dark-grey: #ebebeb;
-$cyan: #00bff3;
-$purple: #8680bc;
-$orange: #fbaf5d;
-$pink: #f06eaa;
-$error-bg: #ffc7c7;
-$error-font:#992828;
+@import '../imports/styles/colors';
 
 body {
   font-family: sans-serif;
