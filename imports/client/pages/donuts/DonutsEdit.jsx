@@ -1,6 +1,7 @@
 import React from 'react';
 import {AutoForm, AutoField, ErrorField} from 'uniforms-unstyled';
 import DonutsSchema from '/imports/db/donuts/schema';
+import DonutForm from '/imports/client/pages/donuts/DonutForm';
 
 export default class DonutsEdit extends React.Component {
     constructor() {
@@ -37,20 +38,7 @@ export default class DonutsEdit extends React.Component {
         }
         return (
             <main>
-                <AutoForm schema={DonutsSchema} onSubmit={this.onSubmit} model={donut}>
-                    <AutoField name="name"/>
-                    <ErrorField name="name"/>
-
-                    <AutoField name="price"/>
-                    <ErrorField name="price"/>
-
-                    <AutoField name="isComestible"/>
-                    <ErrorField name="isComestible"/>
-
-                    <button type="submit">
-                        Edit donut
-                    </button>
-                </AutoForm>
+                <DonutForm schema={DonutsSchema} onSubmit={this.onSubmit} model={donut} />
             </main>
         )
     }
