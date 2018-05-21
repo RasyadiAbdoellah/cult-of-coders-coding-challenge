@@ -9,7 +9,7 @@ export default class DonutForm extends React.Component {
   render() {
     return (
         <main>
-            <AutoForm schema={this.props.schema} onSubmit={this.props.onSubmit} model={ this.props.model? this.props.model : {} }>
+            <AutoForm schema={this.props.schema} onSubmit={this.props.onSubmit} model={ this.props.model? this.props.model : {} } className="donut-form">
                 <AutoField name="name"/>
                 <ErrorField name="name"/>
 
@@ -20,7 +20,7 @@ export default class DonutForm extends React.Component {
                 <ErrorField name="isComestible"/>
 
                 <button type="submit">
-                    Create donut
+                    Save Donut
                 </button>
             </AutoForm>
         </main>

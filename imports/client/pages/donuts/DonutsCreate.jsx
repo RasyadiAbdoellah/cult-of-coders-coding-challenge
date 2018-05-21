@@ -18,7 +18,7 @@ export default class DonutsCreate extends React.Component {
 
     render() {
         return (
-            <main>
+            <main className="container">
                 <DonutForm schema={DonutsSchema} onSubmit={this.onSubmit} />
             </main>
         )

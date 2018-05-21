@@ -37,7 +37,7 @@ export default class DonutsEdit extends React.Component {
             return <div>Loading...</div>
         }
         return (
-            <main>
+            <main className="container">
                 <DonutForm schema={DonutsSchema} onSubmit={this.onSubmit} model={donut} />
             </main>
         )
